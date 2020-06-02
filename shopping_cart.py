@@ -71,10 +71,15 @@ for selected_id in selected_ids:
 
 tax_price = subtotal_price * tax_rate
 total_price = subtotal_price + tax_price
+
+subtotal_price_usd = " (${0:.2f})".format(subtotal_price)
+tax_price_usd = " (${0:.2f})".format(tax_price)
+total_price_usd = " (${0:.2f})".format(total_price)
+
 print("---------------------")
-print("SUBTOTAL PRICE: " + str(subtotal_price))
-print("TAX PRICE:      " + str(tax_price))
-print("TOTAL PRICE:    " + str(total_price))
+print("SUBTOTAL PRICE: " + str(subtotal_price_usd))
+print("TAX PRICE:      " + str(tax_price_usd))
+print("TOTAL PRICE:    " + str(total_price_usd))
 print("---------------------")
 
 # A grocery store name of your choice
