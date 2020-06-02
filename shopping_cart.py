@@ -67,7 +67,7 @@ for selected_id in selected_ids:
     matching_products = [p for p in products if str(p["id"]) == str(selected_id)]
     matching_product = matching_products[0]
     subtotal_price = subtotal_price + matching_product["price"]
-    print(" + " + matching_product["name"] + " " + str(matching_product["price"]))
+    print(" + " + matching_product["name"] + " " + str(" (${0:.2f})".format(matching_product["price"])))
 
 tax_price = subtotal_price * tax_rate
 total_price = subtotal_price + tax_price
