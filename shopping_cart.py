@@ -41,8 +41,9 @@ def to_usd(my_price):
 # INFO CAPUTRE / INPUT
 #
 
-total_price = 0
+subtotal_price = 0
 selected_ids = []
+tax_rate = 0.08
 
 while True:
     selected_id = input("Please input a product identifier: ") #> "9" (string)
@@ -56,14 +57,25 @@ while True:
 # INFO DISPLAY / OUTPUT
 #
 
+print("---------------------")
+print("GRINDLEWALD'S GROCERIES")
+print("---------------------")
+print("Web: www.grindlewalds.com")
+print("---------------------")
+
 for selected_id in selected_ids:
     matching_products = [p for p in products if str(p["id"]) == str(selected_id)]
     matching_product = matching_products[0]
-    total_price = total_price + matching_product["price"]
-    print("SELECTED PRODUCT: " + matching_product["name"] + " " + str(matching_product["price"]))
+    subtotal_price = subtotal_price + matching_product["price"]
+    print(" + " + matching_product["name"] + " " + str(matching_product["price"]))
 
-print("TOTAL PRICE: " + str(total_price))
-
+tax_price = subtotal_price * tax_rate
+total_price = subtotal_price + tax_price
+print("---------------------")
+print("SUBTOTAL PRICE: " + str(subtotal_price))
+print("TAX PRICE:      " + str(tax_price))
+print("TOTAL PRICE:    " + str(total_price))
+print("---------------------")
 
 # A grocery store name of your choice
 # A grocery store phone number and/or website URL of your choice
