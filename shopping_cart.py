@@ -46,7 +46,7 @@ selected_ids = []
 tax_rate = 0.0875
 
 while True:
-    selected_id = input("Please input a product identifier: ") #> "9" (string)
+    selected_id = input("Please input a product identifier, type DONE when finished: ") #> "9" (string)
     if selected_id == "DONE":
         break
     else:
