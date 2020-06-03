@@ -64,7 +64,7 @@ print("---------------------")
 print("GRINDLEWALD'S GROCERIES")
 print("---------------------")
 print("Web: www.grindlewalds.com")
-print(now.strftime('%Y-%m-%d %I:%M'))
+print(now.strftime('%Y-%m-%d %I:%M %p'))
 print("---------------------")
 
 for selected_id in selected_ids:
