@@ -43,7 +43,7 @@ def to_usd(my_price):
 
 subtotal_price = 0
 selected_ids = []
-tax_rate = 0.08
+tax_rate = 0.0875
 
 while True:
     selected_id = input("Please input a product identifier: ") #> "9" (string)
@@ -84,6 +84,8 @@ print("---------------------")
 print("SUBTOTAL PRICE: " + str(subtotal_price_usd))
 print("TAX PRICE:      " + str(tax_price_usd))
 print("TOTAL PRICE:    " + str(total_price_usd))
+print("---------------------")
+print("THANKS FOR SHOPPING WITH US!")
 print("---------------------")
 
 # A grocery store name of your choice
