@@ -57,10 +57,14 @@ while True:
 # INFO DISPLAY / OUTPUT
 #
 
+import datetime
+now = datetime.datetime.now() # https://www.tutorialspoint.com/How-to-print-current-date-and-time-using-Python
+
 print("---------------------")
 print("GRINDLEWALD'S GROCERIES")
 print("---------------------")
 print("Web: www.grindlewalds.com")
+print(now.strftime('%Y-%m-%d %I:%M'))
 print("---------------------")
 
 for selected_id in selected_ids:
