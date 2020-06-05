@@ -41,6 +41,7 @@ def to_usd(my_price):
 # INFO CAPUTRE / INPUT
 #
 
+valid_ids = [str(v["id"]) for v in products]
 subtotal_price = 0
 selected_ids = []
 tax_rate = 0.0875
@@ -49,8 +50,10 @@ while True:
     selected_id = input("Please input a product identifier, type DONE when finished: ") #> "9" (string)
     if selected_id == "DONE":
         break
-    else:
+    elif selected_id in valid_ids:
         selected_ids.append(selected_id)
+    else:
+        print("Invalid Product ID")
 
 
 #
